@@ -1,0 +1,5 @@
+/poetry.lock
+.idea
+archspec.egg-info
+dist
+*__pycache__
