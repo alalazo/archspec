@@ -136,8 +136,9 @@ class LazyDictionary(MutableMapping):
 
 def _load_targets_json():
     """Loads ``microarchitectures.json`` in memory."""
-    directory_name = os.path.dirname(os.path.abspath(__file__))
-    filename = os.path.join(directory_name, 'microarchitectures.json')
+    json_dir = os.path.join(os.path.dirname(__file__), '..', 'json', 'cpu')
+    json_dir = os.path.abspath(json_dir)
+    filename = os.path.join(json_dir, 'microarchitectures.json')
     with open(filename, 'r') as f:
         return json.load(f)
 
