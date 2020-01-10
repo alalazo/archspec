@@ -29,5 +29,6 @@ func Read(filename string) {
 }
 
 func main() {
+	pkger.Include("/json")
 	Read("/json/cpu/microarchitectures.json")
 }
